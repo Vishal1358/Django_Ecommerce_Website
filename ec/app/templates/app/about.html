@@ -1,0 +1,64 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner images">
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner images">
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner images">
+        </div>
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner images">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock banner-slider %}
+{% block main-content %}
+
+
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center">About Us</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">
+
+            Certainly! Here's some sample "About Us" content for a fictional website or business:
+
+            About Us
+
+            Welcome to Msys!
+
+            At Msys, we're more than just a business we're a passionate team of individuals dedicated
+            to creating e-commerce website. Our journey began 2009 and production commenced in 2010, and since
+            then, we've been on a mission to creating web designs.
+        </p>
+    </div>
+    <br><br>
+
+    <h2 class="text-center">Mission</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">
+            Our mission is clear and simple: to Empowering the software community to through our uniq "software development". We believe that
+            To anticipate, understand and respond to our Sustomers.
+        </p>
+    </div>
+</div>
+{% endblock main-content %}
