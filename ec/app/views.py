@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import View
 from .models import Product
 from . forms import CustomerRegistrationForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -39,3 +40,12 @@ class CustomerRegistrationView(View):
         form = CustomerRegistrationForm()
         return render(request, 'app/customerregistration.html',locals())
 
+    def post(self,request):
+        form = CustomerRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Congratulation! User Register Successfully")
+
+        else:
+            messages.error(request,"Invalid Input Data")
+        return render(request, 'app/customerregistration.html',locals())
