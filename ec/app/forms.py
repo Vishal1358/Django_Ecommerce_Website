@@ -22,6 +22,7 @@ class MyPasswordResetForm(PasswordChangeForm):
     pass
 
 class CustomerProfileForm(forms.ModelForm):
+    
     class Meta:
         model = Customer
         fields = ['name', 'locality', 'city', 'mobile', 'state', 'zipcode']
@@ -32,4 +33,6 @@ class CustomerProfileForm(forms.ModelForm):
             'mobile':forms.NumberInput(attrs={'class':'from-control'}),
             'state':forms.Select(attrs={'class':'from-control'}),
             'zipcode':forms.NumberInput(attrs={'class':'from-control'}),
+        
         }
+        

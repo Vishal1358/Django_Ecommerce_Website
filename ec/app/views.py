@@ -1,9 +1,9 @@
 from django.db.models import Count
 from django.shortcuts import render
-from django.views import View
-from .models import Product
-from . forms import CustomerProfileForm, CustomerRegistrationForm, Customer
-from django.contrib import messages
+from django.views import View 
+from .models import Product 
+from . forms import CustomerProfileForm, CustomerRegistrationForm, Customer 
+from django.contrib import messages 
 
 # Create your views here.
 
